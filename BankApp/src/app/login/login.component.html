@@ -1,0 +1,24 @@
+<p>{{abc}}</p>
+<div class="main">
+    <input type="checkbox"id="chk"aria-hidden="true">
+    <div class="signup">
+        <form [formGroup]="registerForm">
+            <label for="chk"aria-hidden="true">Sign-up</label>
+            <input type="text" formControlName="name" id="uname"name="uname"placeholder="UserName"required="">
+            <div *ngIf="(this.registerForm.get('name')?.errors) && (this.registerForm.get('name')?.dirty)">Incorrect Form</div>
+            <input type="text" formControlName="Account" id="accno"name="accno"[placeholder]="placeHolder"required="">
+            <div *ngIf="(this.registerForm.get('Account')?.errors) && (this.registerForm.get('Account')?.dirty)">Incorrect Form</div>
+            <input type="password"formControlName="pass"id="password"name="password"required=""placeholder="Password">
+            <div *ngIf="(this.registerForm.get('pass')?.errors) && (this.registerForm.get('pass')?.dirty)">Incorrect Form</div>
+            <button (click)="signup()">signup</button>    
+        </form>
+    </div>
+    <div class="login" [formGroup]="loginForm">
+        <form [formGroup]="loginForm">
+            <label for="chk"aria-hidden="true">Login</label>
+            <input type="text" formControlName="accountNumber" id="accno" name="accno"[placeholder]="placeHolder"required="">
+            <input type="password"formControlName="password" id="password"name="password" placeholder="Password">
+            <button (click)="login()">Login</button>
+        </form>
+    </div>
+</div>

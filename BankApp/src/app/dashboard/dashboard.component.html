@@ -1,0 +1,16 @@
+<app-navbar (custemClick)="deleteAccount()"></app-navbar>
+<app-deleteaccount [item]="accno" (onCancel)="cancel()"(onDelete)="deleteac($event)"></app-deleteaccount>
+<div [ngClass]="accno?'style1':''">
+<p style="color: white;" appHighlight
+>welcome {{name}}  || {{loginDate | date:'short'}}</p>
+<app-animation></app-animation>
+<div class="card" style="width: 18rem;" >
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{name}}</li>
+      <li class="list-group-item">{{account}}</li>
+      <li class="list-group-item">Balance:{{balance}}</li>
+    </ul>
+    
+  </div>
+  <button (click)="deleteAccount()">Delete Account</button>
+</div>

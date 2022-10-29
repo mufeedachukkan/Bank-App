@@ -1,0 +1,22 @@
+
+.navb{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+}
+/* h3{  
+    color: aliceblue;
+    position: fixed;
+    top: 60px;
+     color: alice; 
+} */
+div{
+    margin-top: 80px;
+}
+h4{
+    color: antiquewhite;
+}
+table{
+    width: 1000px;
+}

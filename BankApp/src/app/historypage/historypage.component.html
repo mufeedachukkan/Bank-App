@@ -1,0 +1,26 @@
+<app-navbar class="navb"></app-navbar>
+<!-- <h3 style="font-family: Verdana">Transaction history</h3> -->
+
+<div *ngIf="transaction.length>=1">
+  <table class="table table-primary">
+    <thead>
+      <tr>
+        <th scope="col"> </th>
+        <th scope="col">Mode</th>
+        <th scope="col">Type</th>
+        <th scope="col">Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of transaction;let i = index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{item.mode}}</td>
+        <td>{{item.type}}</td>
+        <td>{{item.amount}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div *ngIf="transaction.length==0">
+  <h4>transaction empty</h4>
+</div>

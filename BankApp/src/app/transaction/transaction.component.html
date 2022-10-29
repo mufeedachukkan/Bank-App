@@ -1,0 +1,15 @@
+<app-navbar class="navb"></app-navbar>
+<div class="main">
+    <input type="checkbox" id="chk" aria-hidden="true">
+    <div class="signup"[formGroup]="transactionForm">
+        <div>
+            <label for="chk" aria-hidden="true">Deposit</label>
+            <input type="text" formControlName="amou" id="accno" name="accno" placeholder="amount" required="">
+            <div *ngIf="(this.transactionForm.get('amou')?.errors) && (this.transactionForm.get('amou')?.dirty)">Incorrect Form</div>
+            <input type="text" formControlName="daccount" id="accno" name="accno" placeholder="account number" required="">
+            <input type="password" formControlName="dpassword" id="password" name="password" required=""
+                placeholder="Password">
+            <button (click)="deposit()">deposit</button><button (click)="withdraw()">withdraw</button>
+        </div>
+    </div>
+</div>
