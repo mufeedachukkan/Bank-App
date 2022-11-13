@@ -15,12 +15,12 @@ export class DashboardComponent implements OnInit {
   accno:any
   constructor(private db:DatabaseService,private router:Router) { 
     this.loginDate=new Date
-   
-  }
-  ngOnInit(): void {
     this.account=JSON.parse(localStorage.getItem('accountNumber')||'')
     this.name=JSON.parse(localStorage.getItem('name')||'')
     this.balance=JSON.parse(localStorage.getItem('balance')||'')
+  }
+  ngOnInit(): void {
+    
     if(!localStorage.getItem('accountNumber')){
       alert("please login again")
       this.router.navigateByUrl('')  
@@ -35,5 +35,6 @@ export class DashboardComponent implements OnInit {
   }
   deleteac(event:any){
     alert("account deleted")
+    this.router.navigateByUrl('')  
   }
   }

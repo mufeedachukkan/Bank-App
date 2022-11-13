@@ -38,7 +38,7 @@ const withdraw = (daccount, dpassword, amou) => {
           return {
             statusCode: 200,
             status: true,
-            message: "amount added",
+            message: "successful",
             currentBalance
           }
         }

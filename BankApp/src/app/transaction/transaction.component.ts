@@ -73,7 +73,7 @@ export class TransactionComponent implements OnInit {
   }
   withdraw(){
     var daccount:any=this.transactionForm.value.daccount
-    var dpassword:any=this.transactionForm.value.daccount
+    var dpassword:any=this.transactionForm.value.dpassword
     var amou:any=this.transactionForm.value.amou
     const data={
       accno:daccount,
